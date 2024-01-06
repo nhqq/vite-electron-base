@@ -1,0 +1,23 @@
+{
+  "name": "im",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "wait-on tcp:5173 && electron .",
+    "electron:serve": "concurrently -k \"yarn dev\" \"yarn electron\""
+  },
+  "dependencies": {
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.1",
+    "vite": "^5.0.8",
+    "wait-on": "^7.2.0"
+  }
+}
